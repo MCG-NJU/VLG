@@ -1,0 +1,63 @@
+# 8 GPU
+cfg = dict(
+    model='CVLP_vit_14L_prompt',
+    desc_path='data/kinetics400',
+    data_root_train='data/kinetics400/videos_train/',
+    data_root_val='data/kinetics400/videos_val/',
+    pretrained_clip='pretrained/ViT-L-14.pt',
+    context_length=75,
+    pretrain_cvlp=True,
+    loss_type="smoothCE",
+    teacher_model="CVLP_vit_14L",
+
+    use_mcloader=True,
+    data_set='Kinetics',
+    dataset='Kinetics',
+    drop_last=True,
+    index_bias=0,
+
+    weight_sample=True,
+    use_sqrt_freq=True,
+    train_mode=False,
+    train_list_file='data/kinetics400/kinetics_video_train_list.txt',
+    val_list_file='data/kinetics400/kinetics_video_val_list.txt',
+
+    lr=1.e-5,
+    text_lr=1.e-5,
+    fusion_lr=1.e-3,
+    min_lr=0.,
+    use_gpus=8,
+
+    epochs=50,
+    batch_size=int(16),
+
+    repeated_aug=False,
+    mixup=0.,
+    cutmix=0.,
+    clip_ms=True,
+    distillation_beta=0.5,
+    distillation_type='logits',
+    num_segments=8,
+    new_length=1,
+    is_video=True,
+    select_num=50,
+
+    eval_pretrain=True,
+    io_backend='disk',
+    only_video=False,
+    broadcast_bn_buffer=True,
+    find_unused_parameters=False,
+    num_classes=400,
+
+    randaug_m=9,
+    randaug_n=2,
+    opt='adamw',
+    sim_header='Transf',
+    dropout=0.,
+    emb_dropout=0.,
+    place='blockres',
+    joint=False,
+    tsm=False,
+    T=8,
+    consider_fusion_module=True
+)
