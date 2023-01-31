@@ -154,7 +154,7 @@ The `${CONFIG_PATH}` is the relative path of the corresponding configuration fil
 
 ## Pretrained Models:
 
-Release soon.
+The checkpoints are provided in [Baidu Netdisk](https://pan.baidu.com/s/1Q3qXT_Fj1DOz8lQrJZnUmw), and the corresponding code is **nc6e**.
 
 ## Citation
 
