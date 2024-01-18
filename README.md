@@ -14,7 +14,7 @@ pip install decord
 pip install git+https://github.com/ildoonet/pytorch-randaugment
 ```
 
-## Data preparation
+## Data Preparation
 
 ### Kinetics-Close/Kinetics-LT
 
